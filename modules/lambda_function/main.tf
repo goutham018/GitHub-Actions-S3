@@ -26,3 +26,8 @@ resource "aws_lambda_function" "ci_log_processor" {
   role          = aws_iam_role.lambda_exec.arn
   timeout       = 30
 }
+
+# modules/lambda_function/output.tf
+output "lambda_function_arn" {
+  value = aws_lambda_function.ci_log_processor.arn
+}

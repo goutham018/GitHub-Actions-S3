@@ -8,7 +8,6 @@ module "lambda" {
   function_name       = "ci_log_processor"
   lambda_code_bucket  = "your-lambda-code-bucket"
   lambda_code_key     = "lambda_ci_log_processor.zip"
-  depends_on = [module.s3] 
 }
 
 module "s3" {
